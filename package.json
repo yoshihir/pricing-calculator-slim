@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.0.0-alpha.3",
+    "@heroicons/react": "^2.1.1",
     "clsx": "^2.0.0",
     "next": "14.0.3",
     "react": "^18",

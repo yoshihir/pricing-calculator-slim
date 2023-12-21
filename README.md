@@ -1,5 +1,5 @@
-taiwindcssはoptionalを見て、変えたくなったら変える
-https://catalyst.tailwindui.com/docs#before-you-start
+taiwindcssのtemplateは今後も追加されるかも知れないので、適宜チェックする
+https://catalyst.tailwindui.com/docs
 
 
 

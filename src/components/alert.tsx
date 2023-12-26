@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Description as HeadlessDescription,
   Dialog as HeadlessDialog,
@@ -50,7 +48,7 @@ export function Alert({
         </HeadlessTransitionChild>
 
         <HeadlessTransitionChild
-          className="fixed inset-0 overflow-y-auto pt-6 sm:pt-0"
+          className="fixed inset-0 w-screen overflow-y-auto pt-6 sm:pt-0"
           enter="ease-out duration-100"
           enterFrom="opacity-0"
           enterTo="opacity-100"

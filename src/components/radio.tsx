@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Field as HeadlessField,
   Radio as HeadlessRadio,
@@ -57,7 +55,7 @@ export function RadioField({ className, ...props }: HeadlessFieldProps) {
 
 let base = [
   // Basic layout
-  'relative isolate flex size-[1.1875rem] shrink-0 items-center justify-center rounded-full sm:size-[1.0625rem]',
+  'relative isolate flex size-[1.1875rem] shrink-0 rounded-full sm:size-[1.0625rem]',
 
   // Background color + shadow applied to inset pseudo element, so shadow blends with border in light mode
   'before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-white before:shadow',
@@ -92,10 +90,6 @@ let base = [
   'group-data-[disabled]:opacity-50',
   'group-data-[disabled]:border-zinc-950/25 group-data-[disabled]:bg-zinc-950/5 group-data-[disabled]:[--radio-checked-indicator:theme(colors.zinc.950/50%)] group-data-[disabled]:before:bg-transparent',
   'dark:group-data-[disabled]:border-white/20 dark:group-data-[disabled]:bg-white/[2.5%] dark:group-data-[disabled]:[--radio-checked-indicator:theme(colors.white/50%)] dark:group-data-[disabled]:group-data-[checked]:after:hidden',
-
-  // Forced color mode
-  'forced-colors:[--radio-checked-bg:Highlight] forced-colors:group-data-[disabled]:[--radio-checked-indicator:Highlight]',
-  'dark:forced-colors:[--radio-checked-bg:Highlight] dark:forced-colors:group-data-[disabled]:[--radio-checked-indicator:Highlight]',
 ]
 
 let colors = {
@@ -149,7 +143,14 @@ export function Radio({
   return (
     <HeadlessRadio data-slot="control" {...props} className={clsx(className, 'group inline-flex focus:outline-none')}>
       <span className={clsx([base, colors[color]])}>
-        <span className="size-[0.375rem] rounded-full bg-[--radio-indicator]" />
+        <span
+          className={clsx(
+            'size-full rounded-full border-[4.5px] border-transparent bg-[--radio-indicator] bg-clip-padding',
+
+            // Forced colors mode
+            'forced-colors:border-[Canvas] forced-colors:group-data-[checked]:border-[Highlight]'
+          )}
+        />
       </span>
     </HeadlessRadio>
   )

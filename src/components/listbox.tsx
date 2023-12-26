@@ -171,7 +171,7 @@ export function ListboxOption<T>({
               // Focus
               'outline-none data-[focus]:bg-blue-500 data-[focus]:text-white',
 
-              // Forced colors
+              // Forced colors mode
               'forced-color-adjust-none forced-colors:data-[focus]:bg-[Highlight] forced-colors:data-[focus]:text-[HighlightText]',
 
               // Disabled

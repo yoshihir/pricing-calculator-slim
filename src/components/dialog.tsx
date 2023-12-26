@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Description as HeadlessDescription,
   Dialog as HeadlessDialog,
@@ -50,7 +48,7 @@ export function Dialog({
         </HeadlessTransitionChild>
 
         <HeadlessTransitionChild
-          className="fixed inset-0 overflow-y-auto pt-6 sm:pt-0"
+          className="fixed inset-0 w-screen overflow-y-auto pt-6 sm:pt-0"
           enter="ease-out duration-100"
           enterFrom="opacity-0 translate-y-12 sm:translate-y-0"
           enterTo="opacity-100 translate-y-0"
@@ -64,7 +62,7 @@ export function Dialog({
               className={clsx(
                 className,
                 sizes[size],
-                'row-start-2 w-full min-w-0 rounded-t-3xl bg-white p-[--gutter] shadow-lg ring-1 ring-zinc-950/10 [--gutter:theme(spacing.8)] sm:mb-auto sm:rounded-2xl dark:bg-zinc-900 dark:ring-white/10 forced-colors:outline',
+                'row-start-2 w-full min-w-0 rounded-t-3xl bg-white p-[--gutter] shadow-lg ring-1 ring-zinc-950/10 [--gutter:theme(spacing.8)] sm:mb-auto sm:rounded-2xl dark:bg-zinc-900 dark:ring-white/10 forced-colors:outline'
               )}
               enter="ease-out duration-100"
               enterFrom="sm:scale-95"

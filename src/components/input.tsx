@@ -1,5 +1,3 @@
-'use client'
-
 import { Input as HeadlessInput, type InputProps as HeadlessInputProps } from '@headlessui/react'
 import { clsx } from 'clsx'
 
